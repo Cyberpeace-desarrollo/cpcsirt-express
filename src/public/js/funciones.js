@@ -1,4 +1,4 @@
-document.getElementById("inp_number").addEventListener("keypress", function(evt) {
+document.getElementById("telefono").addEventListener("keypress", function(evt) {
   valideKey(evt);
 });
 

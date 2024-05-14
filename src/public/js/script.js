@@ -9,12 +9,12 @@ const close = document.getElementById('close');
 
 
 //--Formulario--
-const nombre= document.getElementById('inp_nom')
-const telefono=document.getElementById('inp_number')
-const correo=document.getElementById('inp_email')
-const empresa=document.getElementById('inp_empre')
-const combo=document.getElementById('combox')
-const descripcion=document.getElementById('inp_descri')
+const nombre= document.getElementById('nombre')
+const telefono=document.getElementById('telefono')
+const correo=document.getElementById('email')
+const empresa=document.getElementById('empresa')
+const combo=document.getElementById('select')
+const descripcion=document.getElementById('descripcion')
 let nommax=30,nummax=12,desmax=70,emailmax=40;
 
 
@@ -74,7 +74,7 @@ const inputs = document.querySelectorAll('#form input');
 
 //declaramos nuestros regex
 const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	telefono: /^\d{1,12}$/,// 10 a 12 numeros.
     correo: /^(([a-zA-Z0-9_\s@]+(\.[a-zA-Z0-9_\s@]+)*)|(\”.+\”))@(([a-zA-Z0-9\s@]+\.)+[a-zA-Z\s@\”]{2,4})$/,
     correo2: /^[a-zA-Z0-9@.]{1,40}$/,
@@ -89,13 +89,13 @@ const validarFormulario = (e)=>{
         case'nombre':
             if(expresiones.nombre.test(e.target.value)){
                 nombre.maxLength = nommax;
-                document.getElementById('inp_nom').addEventListener('keyup', (event) => {
+                document.getElementById('nombre').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });  
             }else{    
-                let carcateres=document.getElementById('inp_nom').value.length;          
+                let carcateres=document.getElementById('nombre').value.length;          
                 nombre.maxLength = carcateres;
-                document.getElementById('inp_nom').addEventListener('keyup', (event) => {
+                document.getElementById('nombre').addEventListener('keyup', (event) => {
                     event.target.style.background="#BB3311";
                 });
             }
@@ -109,19 +109,19 @@ const validarFormulario = (e)=>{
         case'telefono':
             if(expresiones.telefono.test(e.target.value)){
                 telefono.maxLength = nummax;
-                document.getElementById('inp_number').addEventListener('keyup', (event) => {
+                document.getElementById('telefono').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }else{
-                let carcateres=document.getElementById('inp_number').value.length;   
-                document.getElementById('inp_number').maxLength = carcateres;
-                document.getElementById('inp_number').addEventListener('keyup', (event) => {
+                let carcateres=document.getElementById('telefono').value.length;   
+                document.getElementById('telefono').maxLength = carcateres;
+                document.getElementById('telefono').addEventListener('keyup', (event) => {
                     event.target.style.background="#BB3311";
                 });
             }
             if (e.target.value ==='') {
                 telefono.maxLength = nummax;
-                document.getElementById('inp_number').addEventListener('keyup', (event) => {
+                document.getElementById('telefono').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }
@@ -129,26 +129,26 @@ const validarFormulario = (e)=>{
         case'email':
             if(expresiones.correo.test(e.target.value)){
                 correo.maxLength = emailmax;
-                document.getElementById('inp_email').addEventListener('keyup', (event) => {
+                document.getElementById('email').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }else{
                 if(expresiones.correo2.test(e.target.value)  || e.target.value===''){
-                    document.getElementById('inp_email').maxLength = emailmax;
-                    document.getElementById('inp_email').addEventListener('keyup', (event) => {
+                    document.getElementById('email').maxLength = emailmax;
+                    document.getElementById('email').addEventListener('keyup', (event) => {
                         event.target.style.background="#3a8cc71b";
                     });
                 }else{
-                    let carcateres=document.getElementById('inp_email').value.length;          
-                    document.getElementById('inp_email').maxLength = carcateres;
-                    document.getElementById('inp_email').addEventListener('keyup', (event) => {
+                    let carcateres=document.getElementById('email').value.length;          
+                    document.getElementById('email').maxLength = carcateres;
+                    document.getElementById('email').addEventListener('keyup', (event) => {
                         event.target.style.background="#BB3311";
                     });
                 }    
             }
             if (e.target.value ==='') {
                 correo.maxLength = emailmax;
-                document.getElementById('inp_email').addEventListener('keyup', (event) => {
+                document.getElementById('email').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }
@@ -156,19 +156,19 @@ const validarFormulario = (e)=>{
         case'empresa':
             if(expresiones.empresa.test(e.target.value)){
                 empresa.maxLength = nommax;
-                document.getElementById('inp_empre').addEventListener('keyup', (event) => {
+                document.getElementById('empresa').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }else{
-                let carcateres=document.getElementById('inp_empre').value.length;          
-                document.getElementById('inp_empre').maxLength = carcateres;
-                document.getElementById('inp_empre').addEventListener('keyup', (event) => {
+                let carcateres=document.getElementById('empresa').value.length;          
+                document.getElementById('empresa').maxLength = carcateres;
+                document.getElementById('empresa').addEventListener('keyup', (event) => {
                     event.target.style.background="#BB3311";
                 });
             }
             if (e.target.value ==='') {
                 empresa.maxLength = nommax;
-                document.getElementById('inp_empre').addEventListener('keyup', (event) => {
+                document.getElementById('empresa').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }
@@ -176,19 +176,19 @@ const validarFormulario = (e)=>{
         case'descripcion':
             if(expresiones.descripcion.test(e.target.value)){
                 descripcion.maxLength = desmax;
-                document.getElementById('inp_descri').addEventListener('keyup', (event) => {
+                document.getElementById('descripcion').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }else{
-                let carcateres=document.getElementById('inp_descri').value.length;          
-                document.getElementById('inp_descri').maxLength = carcateres;
-                document.getElementById('inp_descri').addEventListener('keyup', (event) => {
+                let carcateres=document.getElementById('descripcion').value.length;          
+                document.getElementById('descripcion').maxLength = carcateres;
+                document.getElementById('descripcion').addEventListener('keyup', (event) => {
                     event.target.style.background="#BB3311";
                 });
             }
             if (e.target.value ==='') {
                 descripcion.maxLength = desmax;
-                document.getElementById('inp_descri').addEventListener('keyup', (event) => {
+                document.getElementById('descripcion').addEventListener('keyup', (event) => {
                     event.target.style.background="#3a8cc71b";
                 });
             }

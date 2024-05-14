@@ -73,16 +73,16 @@
         </main>
     
         <div class="modal-container" id="modal_container">
-            <div class="modal">
+            <div class="modal" style="padding:15px;">
                 <h1 id="emergencia">¿Cuál es su Emergencia?</h1>
                 <form  action="/email" method="post" id="form">
-                            <input type="text" name="nombre" id="inp_nom" placeholder="Nombre completo">
-                            <input type="text" name="telefono" id="inp_number" placeholder="Telefono de contacto">
-                            <input type="text" name="email" id="inp_email" placeholder="Correo">
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo">
+                            <input type="text" name="telefono" id="telefono" placeholder="Telefono de contacto">
+                            <input type="text" name="email" id="email" placeholder="Correo">
                             <p class="description">El correo debe incluir solo letras, números, @ y .</p>
-                            <input type="text" name="empresa" id="inp_empre" placeholder="Nombre de la empresa" >
+                            <input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" >
                             <p class="description">Por favor, introduce un texto de al menos tres caracteres.</p>
-                            <select name="select" id="combox">
+                            <select name="select" id="select">
                                 <option value="Vacio" select id="opcion1">Elija una Opción</option>
                                 <option value="Ransomware">Ransomware</option>
                                 <option value="Malware">Malware</option>
@@ -90,7 +90,7 @@
                                 <option value="Exfiltración de información" id="opcion2">Exfiltración de información</option>
                                 <option value="Otro" id="opcion3">Otro</option>
                             </select>
-                            <input type="text" name="descripcion" id="inp_descri" placeholder="Descripcion" >  
+                            <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" >  
                             <p class="description">Por favor, introduce un texto de al menos cinco caracteres.</p>
                             <!--Recaptcha-->
                             <div class="form-group">
@@ -284,7 +284,8 @@
         </div>
     </section>
 </body>
-<script src="js/alerts.js"></script>
+
+<script src="js/alerts2.js"></script>
 <script src="js/funciones.js"></script>
 <script src="js/languajePagina.js"></script>
 <script src="js/nuevo.js"></script>

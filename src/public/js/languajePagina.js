@@ -52,45 +52,45 @@ if(emer.innerHTML === cad){
 }
 
 /*Para nombre*/ 
-let nomb = document.getElementById("inp_nom").placeholder;
+let nomb = document.getElementById("nombre").placeholder;
 let cad1 = "Nombre completo";
 if(nomb === cad1){
-    document.getElementById("inp_nom").placeholder = "Full name";
+    document.getElementById("nombre").placeholder = "Full name";
 }else{
-    document.getElementById("inp_nom").placeholder = cad1;
+    document.getElementById("nombre").placeholder = cad1;
 }
 
-let tel = document.getElementById("inp_number").placeholder;
+let tel = document.getElementById("telefono").placeholder;
 let cad2 = "Telefono de contacto";
 if(tel === cad2){
-    document.getElementById("inp_number").placeholder = "Contact number";
+    document.getElementById("telefono").placeholder = "Contact number";
 }else{
-    document.getElementById("inp_number").placeholder = cad2;
+    document.getElementById("telefono").placeholder = cad2;
 }
 
 /*Para email*/ 
-let email = document.getElementById("inp_email").placeholder;
+let email = document.getElementById("email").placeholder;
 let cad3 = "Correo";
 if(email === cad3){
-    document.getElementById("inp_email").placeholder = "Email";
+    document.getElementById("email").placeholder = "Email";
 }else{
-    document.getElementById("inp_email").placeholder = cad3;
+    document.getElementById("email").placeholder = cad3;
 }
 
-let empre = document.getElementById("inp_empre").placeholder;
+let empre = document.getElementById("empresa").placeholder;
 let cad4 = "Nombre de la empresa";
 if(empre === cad4){
-    document.getElementById("inp_empre").placeholder = "Name of company";
+    document.getElementById("empresa").placeholder = "Name of company";
 }else{
-    document.getElementById("inp_empre").placeholder = cad4;
+    document.getElementById("empresa").placeholder = cad4;
 }
 
-let descri = document.getElementById("inp_descri").placeholder;
+let descri = document.getElementById("descricion").placeholder;
 let cad5 = "Descripcion";
 if(descri === cad5){
-    document.getElementById("inp_descri").placeholder = "Description";
+    document.getElementById("descricion").placeholder = "Description";
 }else{
-    document.getElementById("inp_descri").placeholder = cad5;
+    document.getElementById("descricion").placeholder = cad5;
 }
 
 
