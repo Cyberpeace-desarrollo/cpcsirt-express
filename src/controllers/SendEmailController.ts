@@ -13,14 +13,14 @@ class SendEmailController {
         body('descripcion').matches(/^[a-zA-ZÀ-ÿ0-9,\s]{1,70}$/)
     ];
 
-    handleSubmit = async (req: Request, res: Response): Promise<Response> => {
+    handleSubmit = async (req: Request, res: Response) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
 
         try {
-            const { nombre, telefono, email, empresa, select, descripcion } = req.body;
+            const { nombre, telefono, email, empresa, select, descripcion} = req.body;
             const recaptchaResponse = req.body['g-recaptcha-response'];
             const result = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
                 params: {
@@ -32,13 +32,14 @@ class SendEmailController {
             if (result.data.success) {
                 const contentHTML = this.createEmailContent(nombre, telefono, email, empresa, select, descripcion);
                 await this.sendEmail(contentHTML);
-                return res.send('Correo enviado');
+                return res.status(200).json({ message: "Correo enviado exitosamente" });
             } else {
-                return res.status(400).send('Error: reCAPTCHA inválido');
+                console.log('Error: reCAPTCHA inválido');
+                return res.status(403).json({ message: "Error de validación de reCAPTCHA" });
             }
         } catch (e) {
             console.error(e);
-            return res.status(500).send('Algo salió mal');
+            return res.status(500).json({ message: "Error interno del servidor" });
         }
     };
 
@@ -58,7 +59,7 @@ class SendEmailController {
 
     private sendEmail = async (contentHTML: string): Promise<void> => {
         const transporter = nodemailer.createTransport({
-            host: 'mail1.cyberpeace.com.mx',
+            host: 'smtp-mail.outlook.com',
             port: 587,
             auth: {
                 user: process.env.CORREO,
@@ -70,7 +71,7 @@ class SendEmailController {
         });
 
         const info = await transporter.sendMail({
-            from: "'Cpcsirt' <cpcsirt@cpcsirt.com>",
+            from: "'Cpcsirt' <" + process.env.CORREO + ">",
             to: process.env.DESTINO,
             subject: 'Alerta de Seguridad Cpscirt',
             html: contentHTML

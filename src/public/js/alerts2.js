@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const btn_env = document.getElementById('btn_enviar');
-    btn_env.addEventListener('click', async (event) => {
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(event) {
         event.preventDefault(); // Evita el envío del formulario por defecto
+
         let errors = validateForm();
-        let isCaptchaComplete = isRecaptchaCompleted();
+        let captchaResponse = grecaptcha.getResponse();
 
         if (errors.length > 0) {
             Swal.fire({
@@ -15,19 +16,49 @@ document.addEventListener('DOMContentLoaded', function () {
                 position: 'top',
                 timer: 6000,
                 timerProgressBar: true,
-            });     
-        } else if (!isCaptchaComplete) {
+            });
+        } else if (captchaResponse.length === 0) {
             document.getElementById('g-recaptcha-error').innerHTML = `<span style="color:red;">reCAPTCHA no completado</span>`;
         } else {
-            document.getElementById('g-recaptcha-error').innerHTML = `<span style="color:green;">reCAPTCHA completado</span>`;
-            document.getElementById('form').submit(); 
+            // Crear un objeto JavaScript para enviar como JSON
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                telefono: document.getElementById('telefono').value,
+                email: document.getElementById('email').value,
+                empresa: document.getElementById('empresa').value,
+                select: document.getElementById('select').value,
+                descripcion: document.getElementById('descripcion').value,
+                'g-recaptcha-response': captchaResponse
+            };
+            fetch('/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'  // Especifica que el cuerpo es JSON
+                },
+                body: JSON.stringify(formData)  // Convierte el objeto JavaScript a JSON
+            })
+            .then(response => response.json())
+            .then(data => {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Enviado!',
+                    text: data.message,  // Utiliza el mensaje enviado desde el servidor
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/'; // Redirigir a la página de inicio
+                    }
+                });
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo salió mal al enviar el correo!',
+                });
+            });
         }
     });
-
-    function isRecaptchaCompleted() {
-        const response = grecaptcha.getResponse();
-        return response !== '';
-    }
 
     function validateForm() {
         const nombre = document.getElementById('nombre').value;
@@ -37,32 +68,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const select = document.getElementById('select').value;
         const descripcion = document.getElementById('descripcion').value;
 
-        const expresiones = {
-            nombre: /^[a-zA-ZÀ-ÿ\s]{5,40}$/,
-            telefono: /^\d{10,12}$/,
-            correo: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
-            empresa: /^[a-zA-ZÀ-ÿ\s]{1,30}$/,
-            descripcion: /^[a-zA-ZÀ-ÿ0-9,\s]{1,70}$/,
-        };
-
         let errors = [];
-        if (!expresiones.nombre.test(nombre) || nombre.length < 5) {
-            errors.push('Nombre');
+        if (nombre.length < 3) {
+            errors.push('Nombre completo requerido');
         }
-        if (!expresiones.telefono.test(telefono)) {
-            errors.push('Teléfono');
+        if (telefono.length < 5) {
+            errors.push('Teléfono de contacto válido requerido');
         }
-        if (!expresiones.correo.test(email)) {
-            errors.push('Correo');
+        if (!email.includes('@') || !email.includes('.')) {
+            errors.push('Correo válido requerido');
         }
-        if (!expresiones.empresa.test(empresa) || empresa.length < 2) {
-            errors.push('Empresa');
+        if (empresa.length < 3) {
+            errors.push('Nombre de la empresa requerido');
         }
         if (select === 'Vacio') {
-            errors.push('Selecciona una opción');
+            errors.push('Seleccione una opción');
         }
-        if (!expresiones.descripcion.test(descripcion) || descripcion.length < 4) {
-            errors.push('Descripción');
+        if (descripcion.length < 5) {
+            errors.push('Descripción requerida');
         }
 
         return errors;
