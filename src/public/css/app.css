@@ -1,0 +1,234 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arimo', sans-serif;
+}
+#tit{
+  display: none;
+}
+#inicio{
+  /*border: coral 5px solid;*/
+  background-image: url('../img/fnd.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 790px;
+}
+
+.description{
+  color: white;
+}
+
+.movil{display: none;}
+
+/*depegammos un poco lo que es el header*/
+header{
+   height: 100px;
+}
+
+
+.container__header{
+   /*max width es el espacio de los margenes  a los lados*/
+   height: 100%;
+   margin: auto;
+   /*el display flex para el contendio se ponga uno a lado del otro*/
+   display: flex;
+   /*justify-contet-space-between para que el contendio se distribulla a lo largo del menu */
+   justify-content: space-between;
+   align-items: center;
+}
+
+/*para dar tamaño ala imagen que esta dentro dele menu*/
+.log img{
+   width: 120px;
+   margin-left: 40px;
+}
+
+
+.header__registro{
+  height: 100px;
+  width: 50%;
+}
+.btn-panic{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: linear-gradient(37deg, transparent 15%, #A52100   0% 40%, #A52100    80% );
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+/*portada main*/
+main{
+  max-width: 1400px;
+  /*crea un espacio mas abajo */
+  padding: 40px;
+  margin: auto;
+  display: flex;
+}
+.cover{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.btn-em-cover{
+  margin-top: 20px;
+  padding: 20px 20px;
+  border: none;
+  background: #A52100 ;
+  border-radius: 30px;
+  color: white;
+  font-family: 'Arimo', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  /*el; cursor pointer sirve para que cuando pases aperezco otro icon del raton*/
+  cursor: pointer;
+  transition:  background,color,300ms;
+}
+.btn-em-cover:active{transform: translateY(8px);}
+
+.btn-panic:hover{background: linear-gradient(37deg, transparent 15%, #28A1CE  0% 40%, #28A1CE   80% );}
+.btn-em-cover:hover{background: #28A1CE;}
+
+
+.text__informacion-cover{
+  width: 50%;
+}
+.text__informacion-cover #tit2{
+  color:#53d7f4;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 15px;
+}
+.text__informacion-cover p{
+  color: #ffff;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+/*lado derecho*/
+.media__cover{
+  flex-direction: column;
+  width: 50%;
+  display: flex;
+  padding-left: 80px;
+}
+#lg1,#lg2,#lg3{
+  width: 150px;
+  padding: 0 10px;
+}
+
+#lg1{margin-left:10%; margin-top: 30px;}
+
+#lg2{margin-left:30%; margin-top: 20px;}
+
+#lg3{margin-left:10%; margin-top: 20px;}
+
+@media (max-width:1920px){
+  #inicio{
+      height: 980px;
+  }
+  .cover{
+    margin-top: 200px;
+  }
+}
+
+@media (max-width:1090px){
+  #inicio{
+      height: 900px;
+  }
+}
+
+@media (max-width:1280px) {
+  .btn-panic{
+      height: 88%;
+      background: linear-gradient(43deg, transparent 15%, #A52100   0% 40%, #A52100    80% );
+      font-size: 15px;
+  }
+  .btn-panic:hover{background: linear-gradient(43deg, transparent 15%, #28A1CE  0% 40%, #28A1CE   80% );}
+  .btn-em-cover:hover{background: #28A1CE;}
+  
+}
+
+
+
+@media (max-width:1024px) {
+  #inicio{
+      /*border: coral 5px solid;*/
+      background-image: url('../img/fnd1024.png');
+  }
+  .btn-panic{
+      height: 88%;
+      background: linear-gradient(43deg, transparent 15%, #A52100   0% 40%, #A52100    80% );
+      font-size: 15px;
+  }
+  .btn-panic:hover{background: linear-gradient(43deg, transparent 15%, #28A1CE  0% 40%, #28A1CE   80% );}
+  .btn-em-cover:hover{background: #28A1CE;}
+
+  .text__informacion-cover #tit2{font-size:20px ;}
+  .text__informacion-cover #t{font-size: 16px;}
+  #lg1,#lg2,#lg3{
+      width: 130px;
+      padding: 0 10px;
+  }
+}
+
+
+
+@media (max-width:920px){
+  #inicio{
+      /*border: coral 5px solid;*/
+      background-image: url('../img/fondo1.png');
+  }
+  .log img{
+      width: 100px;
+ }
+ .container__header,main{padding: 20px;}
+  /*oculta el boton del emergencia*/
+  .header__registro{display: none;}
+  .movil{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 15%;
+       width: 100%; margin-top: 20px;
+  }
+  #imgmov{margin-top: 35%;height: 180%; width: 100%;}
+  #movil-panic{background:#B13418; color: white; height: 30px; width: 70%; margin-top: -10px;}
+  .movil-logs{margin-top: 30px;}
+  #mov1,#mov2,#mov3{
+          height: 60px;
+          width: 60px;
+          margin-left:5px;
+  }
+  #lgcpcsirt{margin-top:25%;}
+  .btn-em-cover{padding: 10px 10px;font-size: 15px;}
+  .text__informacion-cover{width: 100%; text-align: center;}
+  .text__informacion-cover  #tit2{font-size: 12px;}
+  .text__informacion-cover #t{font-size: 10px;}
+  .media__cover{display: none;}
+}
+
+@media (max-width:320px){
+  main{
+      padding: 0px;
+  }
+  .cover{
+      padding: 0px;
+  }
+  .log img{
+      width: 90px;
+      margin-left: 15px;
+ }
+ 
+}

@@ -1,0 +1,86 @@
+.toggle{
+    /*border: 3px solid greenyellow;*/
+    width: max-content;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.text__informacion-cover .content{
+    display: none;
+}
+
+.text__informacion-cover .content.tit2{
+    display: block;
+}
+
+.check{
+    position: relative;
+    width: 50px;
+}
+
+.check:before{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: gainsboro;
+    border-radius: 25px;
+}
+
+.check:checked:before{
+    background: #00a1ff;
+}
+
+.check:after{
+    content:'';
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 18px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.5s;
+    border: 2px solid #333;
+}
+ 
+.check:checked:after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+
+.es{
+    color: red;
+}
+.en{
+    color: #00a1ff;
+}
+
+.mexico-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.usa-img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 920px){
+    .toggle{
+        margin-right:1050px;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    .toggle{
+        margin-right:1100px;
+    }
+    
+}

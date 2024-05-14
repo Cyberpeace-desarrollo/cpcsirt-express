@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+*{
+    box-sizing: border-box;
+}
+*body{
+    align-items: center;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn_enviar{
+    background-color: #39D332;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 25px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+#close{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 0;
+    padding: 10px 25px;
+    margin-top: 10px;
+}
+button:hover{background:#28A1CE;}
+#close:active,#btn_enviar:active{transform: translateY(8px);}
+
+#close:hover{background: #28A1CE;}
+
+
+.modal-container{
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal{
+    background-image: url('../img/fondo2.png');
+    background-size:cover;
+    /*background-color: white;*/
+    width: 100vh;
+    max-width: 100%;
+    padding: 50px 100px;
+    border-radius: 10px;
+    box-shadow: 8px 8px black;
+    text-align: center;
+}
+.g-recaptcha{
+    padding-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal input{
+    width: 100%;
+    border: solid  #0774A4 2px;
+    background: #3a8cc71b;
+    color: white;
+    font-weight: 100;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.modal select{
+    width: 100%;
+    border: solid  #0774A4 2px;
+    background: #3a8cc71b;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.modal ::placeholder{
+    text-align: center;
+    color: rgba(240, 248, 255, 0.788);
+}
+#combox{ color: rgba(240, 248, 255, 0.788);}
+option{background:#034664 ;}
+
+.modal h1{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.841);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width:1800px) {
+   
+    #btn_enviar{font-size: 25px;}
+    #close{font-size: 25px;}
+    .modal{height: 60vh;}
+
+    .modal input{
+        margin-top: 20px;
+    }
+    
+    .modal select{
+        margin-top: 20px;
+    }
+    
+
+}
+
+
+@media (max-width:920px){  
+    .modal{
+        border: solid teal 2px;
+        max-width: 95%;
+        padding: 50px 100px;
+        height: 65%;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    h1{margin-top: -80px; font-size: 12px;}
+    .modal input{
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .modal select{
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+   
+ }

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/cpcsirt.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="css/seccion2.css">
+    <link rel="stylesheet" href="css/seccion3.css">
+    <link rel="stylesheet" href="css/seccion4.css">
+    <link rel="stylesheet" href="css/seccion5.css">
+    <link rel="shortcut icon" href="img/iconpes.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>CPCSIRT | CYBERPEACE </title>
+</head>
+
+<body>
+    <section id="inicio">
+        <header>
+            <div class="container__header">
+                <div class="log">
+                    <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/logobl.png" alt=""></a>
+                </div>
+                <div class="toggle">
+                    <img src="img/mx.svg" alt="" class="mexico-img">
+                    <input id="myCheckbox" type="checkbox" class="check"/>
+                    <img src="img/us.svg" alt="" class="usa-img">
+                </div>
+                <div class="header__registro">
+                    <input type="button" class="btn-panic" id="open2" value="REPORTAR INCIDENTE DE CIBERSEGURIDAD">
+                </div>
+            </div>
+        </header>
+  
+         <div class="movil">
+            <img src="img/fondmov.png" id="imgmov" alt="" srcset="">
+            <input id="movil-panic" type="button" value="REPORTAR INCIDENTE DE CIBERSEGURIDAD">
+            <div class="movil-logs">
+                <img src="img/logpremov.png" id="mov1" alt="">
+                <img src="img/logdetmov.png" id="mov2" alt="">
+                <img src="img/logresmov.png" id="mov3" alt="">
+            </div>
+        </div>
+
+
+      
+        <main>
+            <div class="cover">
+                <div class="text__informacion-cover">
+                    <p id="tit">CPCSIRT</p>
+                    <img src="img/lgcpcsirt.png" id="lgcpcsirt" height="30%" width="90%" alt="" >
+                    <p id="tit2" >EQUIPO DE RESPUESTA A INCIDENTES DE SEGURIDAD</p>
+                    <p id="t">Contamos con los conocimientos y experiencia para garantizar una correcta operación de seguridad alineada las mejores prácticas y estándares internacionales al contar con nuestro MDR SOC</p>
+                    <div class="btn-cover">
+                        <input type="button" class="btn-em-cover" id="open" value="REPORTAR UN INCIDENTE">
+                    </div>
+                </div>
+                <div class="media__cover">
+                    <div class="log1">
+                        <img src="img/logpreven_CPCSIRT.png" id="lg1"  alt="">
+                    </div>
+                    <div class="log2">
+                        <img src="img/logDetec_CPCSIRT.png" id="lg2" alt="">
+                    </div>
+                    <div class="log3">
+                        <img src="img/logResp_CPCSIRT.png" id="lg3" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <h1 id="emergencia">¿Cuál es su Emergencia?</h1>
+                <form  action="/email" method="post" id="form">
+                            <input type="text" name="nombre" id="inp_nom" placeholder="Nombre completo">
+                            <input type="text" name="telefono" id="inp_number" placeholder="Telefono de contacto">
+                            <input type="text" name="email" id="inp_email" placeholder="Correo">
+                            <p class="description">El correo debe incluir solo letras, números, @ y .</p>
+                            <input type="text" name="empresa" id="inp_empre" placeholder="Nombre de la empresa" >
+                            <p class="description">Por favor, introduce un texto de al menos tres caracteres.</p>
+                            <select name="select" id="combox">
+                                <option value="Vacio" select id="opcion1">Elija una Opción</option>
+                                <option value="Ransomware">Ransomware</option>
+                                <option value="Malware">Malware</option>
+                                <option value="DDoS">DDoS</option>
+                                <option value="Exfiltración de información" id="opcion2">Exfiltración de información</option>
+                                <option value="Otro" id="opcion3">Otro</option>
+                            </select>
+                            <input type="text" name="descripcion" id="inp_descri" placeholder="Descripcion" >  
+                            <p class="description">Por favor, introduce un texto de al menos cinco caracteres.</p>
+                            <!--Recaptcha-->
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6Le1so4lAAAAAM45ylkYzCuTdEz4GWW9nxLas-Lh"></div>
+                            </div>
+
+                            <div id="g-recaptcha-error"></div>
+                            <!--Botones-->
+                            <div class="botones">
+                                <button id="btn_enviar">Enviar</button>
+                                <button id="close">Cerrar</button>
+                            </div>
+                </form>
+            </div>
+        </div>  
+    </section>
+    <section class="Seccion2">
+        <div id="menudivisor">
+            <div id="barra">
+                <button id="boton1"><img src="img/barra.png" alt="scroll" width="100%" height="100%" ></button>
+            </div>
+        </div>
+        <div class="contenidoSec2">
+            <div id="sec2tit">
+                <h1 id="tituloSec1">¿QUIÉNES SOMOS?</h1>
+            </div>
+            <div id="textos">
+                <p id="sec2parrafo">Somos un equipo especializado de <span id="title_blue">Cyberpeace</span> que cuenta con las capacidades y habilidades técnicas necesarias para la investigación de amenazas y respuesta a incidentes cibernéticos.</p>
+                <p id="sec2parrafo2">Con base en ello, el <span id="title_blue">Cyberpeace CSIRT</span> unit provee a nuestros clientes y a las empresas que asi lo requieran, una respuesta inmediata y profesional ante cualquier situación de amenaza o crisis cibernética.</p>
+            </div>
+            <div class="sec2logos">
+                <div class="sec2log">
+                    <img src="img/anticipation.png" id="sec2lg"  alt="">
+                    <h3 id="sec2logtit">Anticipation</h3>
+                    <p id="sec2par">Evite el impacto de amenazas conocidas anticipandose a ellas.</p>
+                </div>
+                <div class="sec2log1">
+                    <img src="img/hunting.png" id="sec2lg1" alt="">
+                    <h3 id="sec2logtit1">Hunting</h3>
+                    <p id="sec2par1">Encuentre apt que pasen desapercibidas y expongalas.</p>
+                </div>
+                <div class="sec2log2">
+                    <img src="img/monitoring.png" id="sec2lg2" alt="">
+                    <h3 id="sec2logtit2">Monitoring</h3>
+                    <p id="sec2par2">Monitoreo en tiempo real centralizado de todos sus dispositivos.</p>
+                </div>
+                <div class="sec2log3">
+                    <img src="img/response.png" id="sec2lg3"  alt="">
+                    <h3 id="sec2logtit3">Response</h3>
+                    <p id="sec2par3">Respuesta y manejo de incidentes.</p>
+                </div>
+                <div class="sec2log4">
+                    <img src="img/remdiation.png" id="sec2lg4" alt="">
+                    <h3 id="sec2logtit4">Remediation</h3>
+                    <p id="sec2par4">Recuperación, mitigación de vulnerabilidades y hardening.</p>
+                </div>
+                <div class="sec2log5">
+                    <img src="img/orchestration.png" id="sec2lg5" alt="">
+                    <h3 id="sec2logtit5">Orchestration</h3>
+                    <p id="sec2par5">Estrategias de soporte en el manejo de incidentes.</p>
+                </div>
+            </div>
+            <div class="sec2empre"> 
+                <div id="sec2mision">  
+                    <div id="contenmis">
+                        <img src="img/lgmison.png" id="sec2lgm" alt="">
+                        <h3 id="conmitit">Misión</h3>
+                    </div>
+                    <div id="contenmis2">
+                        <div id="sec2ce">
+                            <p id="eticonte">Contribuir a crear un entorno de prevención eficiente para nuestros clientes ante la creciente aparición de amenazas en el ciber espacio que buscan materializarse y lograr afectaciones severas en las infraestructuras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sec2vision">  
+                    <div id="convis">
+                        <img src="img/lgvision.png" id="sec2lgv" alt="">
+                        <h3 id="convitit">Visión</h3>
+                    </div>
+                    <div id="contevis2">
+                        <div id="sec2ce1">
+                            <p id="eticonte1">Ser la mejor unidad de respuesta a incidentes reconocida por nuestros clientes y socios de negocio.</p>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Seccion3">
+        <div class="contenidoSec3">
+            <div class="sec3titulo">
+                <h2 id="sec3tit">NUESTROS SERVICIOS</h2>
+            </div>
+            <div class="sec3circulos">
+                <div id="sec3circulo">
+                    <img src="img/circulo.png" id="sec3cir" alt="">
+                    <div id="cir">
+                        <p id="cirtit">RESPUESTA A INCIDENTES CIBERNÉTICOS</p>
+                        <ul>
+                            <li id="list">• Análisis de malware</li>
+                            <li id="list1">• Análisis forense como respuesta a incidentes</li>
+                            <li id="list2">• Detección, contención y erradicación de amenazas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="sec3circulo1">   
+                    <img src="img/circulo.png" id="sec3cir1" alt="">
+                    <div id="cir1">
+                        <p id="cirtit1">GESTIÓN DE AMENAZAS</p>
+                        <ul>
+                            <li id="list3">• Cacería de amenazas</li>
+                            <li id="list4">• Ejercicios de emulación de amenazas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="sec3circulo2">
+                    <img src="img/circulo.png" id="sec3cir2" alt="">
+                    <div id="cir2">
+                        <p id="cirtit2">COLABORACIÓN</p>
+                        <ul>
+                            <li id="list5">• Elaboración de ttps e inteligencia de amenazas</li>
+                            <li id="list6">• Mapeo de vectores de ataques cibernéticos</li>
+                            <li id="list7">• Boletines de seguridad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="sec3circulo3">
+                    <img src="img/circulo.png" id="sec3cir3" alt="">
+                    <div id="cir3">
+                        <p id="cirtit3">CAPACITACIÓN</p>
+                        <ul>
+                            <li id="list8">• Cursos de capacitación en respuesta a incidentes</li>
+                            <li id="list9">• Cursos en análisis de artefactos</li>
+                            <li id="list10">• Cursos de realización planes de respuesta a incidentes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <section class="Seccion4">
+        <div class="contenidoSec4">
+            <div class="sec4titulo">
+                <h2 id="sec4tit">NUESTRA PRESENCIA</h2>
+            </div>
+            <div id="sec4presen">
+                <img src="img/presencia.png" id="sec4pres" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="Seccion5">
+        <div class="contenidoSec5">
+            <div id="sec5log">
+                <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/Logoblanco.png" id="lgc1"  height="100%" width="100%" alt=""></a>
+            </div>
+            <div id="sec5suc">
+                <h2 id="sec5tit1">SUCURSALES</h2>
+                <h3 id="sec5su">Cuidad de México</h3>
+                <p id="sec5par">
+                   Periférico Sur 3395, Jardines del Pedregal,
+                   Tlalpan, 14120 Cuidad de México, CDMX.</p>
+                <h3 id="sec5su1">Nuevo Léon</h3>
+                <p id="sec5par1">
+                    Humberto Junco Voigt 2037, Valle Oriente,
+                    66269 San Pedro Garza García, N.L.
+                </p>
+                <h3 id="sec5su2">Cuernavaca</h3>
+                <p id="sec5par2">
+                    Avenida Morelos 178 int C1, Centro,
+                    62000, Cuernavaca, Morelos
+                </p>
+            </div>
+            <div id="sec5acer">
+                <h2 id="sec5tit2">ACERCA DE CYBERPEACE</h2>
+                <div id="sec5con1">
+                    <a href="https://www.cyberpeace.tech/" id="a1">Acerca de nosotros</a>
+                    <a href="https://www.cyberpeace.tech/derechos-arco" id="a2">Derechos arco</a>
+                    <a href="https://www.cyberpeace.tech/aviso-de-privacidad" id="a3">Aviso de privacidad</a>
+                    <a href="https://www.cyberpeace.tech/politica-de-seguridad" id="a4">Politica de seguridad</a>
+                </div>
+            </div>
+            <div id="sec5con">
+                <h2 id="sec5tit3">CONTACTO</h2>
+                <p id="sec5p">
+                   Telefono: 55 8111-5800
+                </p>
+                <p id="sec5p1">
+                    Correo: contacto@cyberpeace.tech
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/alerts.js"></script>
+<script src="js/funciones.js"></script>
+<script src="js/languajePagina.js"></script>
+<script src="js/nuevo.js"></script>
+<script src="js/script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PPVQ0H5869"></script>
+</html>

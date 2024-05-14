@@ -1,0 +1,7 @@
+import '../css/app.css'
+import '../css/cpcsirt.css'
+import '../css/language.css'
+import '../css/seccion2.css'
+import '../css/seccion3.css'
+import '../css/seccion4.css'
+import '../css/seccion5.css'

@@ -1,0 +1,138 @@
+.Seccion3{
+    background-image: url('../img/fondo3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenidoSec3{
+     /*border: mediumaquamarine 2px solid;*/
+     height: 800px;
+     max-width: 1200px;
+     margin: auto;
+     padding: 10px;
+}
+
+#sec3tit{
+    text-align: center;
+    color: #53d7f4;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 8%;
+}
+
+.sec3circulos{
+    margin-top: 90px;
+    display: flex;
+}
+
+#sec3circulo,#sec3circulo1,#sec3circulo2,#sec3circulo3{
+    /*border: rgb(183, 174, 11) 2px solid;*/
+    width: 25%;
+    text-align: center;
+}
+
+#sec3cir,#sec3cir1,#sec3cir2,#sec3cir3{
+    width: 95%;
+}
+
+#cir{
+    position: relative;
+    margin-top: -80%;
+    margin-left: 10%;
+    width: 80%;
+    /*border: greenyellow 2px solid;*/
+}
+#cir1{
+    position: relative;
+    margin-top: -75%;
+    margin-left: 10%;
+    width: 80%;
+}
+#cir2{
+    position: relative;
+    margin-top: -75%;
+    margin-left: 10%;
+    width: 80%;
+}
+#cir3{
+    position: relative;
+    margin-top: -75%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+#cirtit,#cirtit1,#cirtit2,#cirtit3{
+    color: #53d7f4;
+    text-align: center;
+}
+ul{
+    margin-top: 15px;
+    color: #ffff;
+    width: 80%;
+    font-family: 'Arimo', sans-serif;
+    margin-left: 10%;
+    list-style: none;
+}
+
+@media screen and (max-width:1024px) {
+    ul{
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 920px){
+    .contenidoSec3{
+        height: 400px;
+        /*border: 3px rgb(208, 255, 0) solid;*/
+    }
+    #sec3tit{
+        margin-top: 15%;
+        font-size: 100%;
+    }
+    #cirtit,#cirtit1,#cirtit2,#cirtit3{
+        font-size: 40%;
+    }
+    ul{
+        font-size: 23%;
+    }
+    .sec3circulos{
+        margin-top: 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+    /*.sec3circulos{
+       / border: #53d7f4 2px solid;
+    }*/
+    #sec3cir,#sec3cir1,#sec3cir2,#sec3cir3{
+        width: 95%;
+        height: 140px;
+    }
+    #sec3tit{
+        margin-top: 20%;
+        font-size: 100%;
+    }
+    /*#sec3circulo{
+       /* border: #53d7f4 2px solid;
+    }*/
+    #cir,#cir1,#cir2,#cir3{
+        margin-top: -120px;
+    }
+    ul{
+        font-weight: 5px;
+    }
+}
+
+@media screen and (max-width:395px) {
+    #cirtit,#cirtit1,#cirtit2,#cirtit3{
+        font-size: 5.5px;
+    }
+    ul{
+        font-size: 5px;
+    }
+}

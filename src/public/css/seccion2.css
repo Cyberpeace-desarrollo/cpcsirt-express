@@ -1,0 +1,338 @@
+#menudivisor{
+    width: 100%;
+    margin-top: 0;
+    /*border: red 4px solid;*/
+}
+#barra{
+    width: 100%;
+}
+#boton1{
+    background: #ffffff00;
+    border: 0;
+    cursor: pointer;
+}
+
+.Seccion2{
+    background-image: url('../img/fondo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenidoSec2{
+     /*border: mediumaquamarine 2px solid;*/
+     height: 1000px;
+     max-width: 1200px;
+     margin: auto;
+     padding: 10px;
+}
+
+#sec2tit{
+    color: #53d7f4;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5%;
+    /*border: violet 2px solid;*/
+}
+
+#title_blue{
+    color:#53d7f4;
+}
+
+#sec2parrafo{
+    margin-top: 60px;
+    color: #ffff;
+    font-family: 'Arimo', sans-serif;
+    /*border: violet 2px solid;*/
+}
+#sec2parrafo2{
+    margin-top: 30px;
+    color: #ffff;
+    font-family: 'Arimo', sans-serif;
+}
+
+.sec2logos{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.sec2log,.sec2log1,.sec2log2,.sec2log3,.sec2log4,.sec2log5{
+    width: 20%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#sec2logtit,#sec2logtit1,#sec2logtit2,#sec2logtit3,#sec2logtit4,#sec2logtit5{
+    margin-top: 15px;
+    color: #53d7f4;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#sec2par,#sec2par1,#sec2par2,#sec2par3,#sec2par4,#sec2par5{
+    margin-top: 15px;
+    color: #ffff;
+    text-align: center;
+}
+#sec2lg,#sec2lg1,#sec2lg2,#sec2lg3,#sec2lg4,#sec2lg5{
+    width: 80%;
+}
+
+.sec2empre{
+    margin-top:70px;
+    display: flex;
+}
+
+#sec2mision,#sec2vision{
+    width: 50%;
+    text-align: center;
+   /* border: rgb(130, 143, 238) 2px solid;*/
+}
+
+/*imagenes*/
+#sec2lgm{width: 20%;}
+#sec2lgv{width: 20%;}
+
+/*contendio*/
+#conmitit,#convitit{
+    margin-top: 15px;
+    color: #ffff;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+}
+
+#sec2ce,#sec2ce1{
+    background-color: #53d7f4ce; 
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 15px;
+    height: 100px;
+}
+
+#contenmis2{
+    margin-top: 222px;
+}
+
+#contevis2{
+    margin-top: 200px;
+}
+
+#eticonte{
+    color: #ffff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+#eticonte1{
+    color: #ffff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*#contenmis2{border: rebeccapurple 2px solid;
+}
+#contevis2{border: rebeccapurple 2px solid;
+}*/
+
+#sec2ce,#sec2ce1{
+    /*border: red 2px solid;*/
+    width: 70%;
+    position: relative;
+}
+
+#sec2ce{
+    margin-top: -26%;
+    margin-left: 15%;
+    font-size: 20px;
+}
+
+#sec2ce1{
+    margin-top: -26%;
+    margin-left: 15%;
+    font-size: 22px;
+}
+
+#eticonte{color: #ffff;font-family: 'Arimo', sans-serif;}
+#eticonte1{color: #ffff;font-family: 'Arimo', sans-serif;}
+
+
+@media screen and (max-width: 920px){
+    #movil-panic{
+        color: #ffff;
+        font-family: 'Arimo', sans-serif;
+        font-size: 10px;
+    }
+    #tituloSec1{
+        margin-top: 4%;
+        font-size: 80%;
+    }
+
+    #textos{margin-top: -5%;}
+
+    .sec2logos{
+        /*border: 3px red solid;*/
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 205px 205px;
+        justify-items: center;
+        margin-top: 1%;
+    }
+
+    .sec2logos > div{
+        /*border: 3px red solid;*/
+        width: 60%;
+    }
+
+    #sec2lg,#sec2lg1,#sec2lg2,#sec2lg3,#sec2lg4,#sec2lg5{width: 40%;}
+
+    #sec2lgm{width: 10%;}
+    #sec2lgv{width: 5%;}
+
+
+    #conmitit,#convitit{
+        margin-top: 5px;
+    }
+
+    #contenmis2{
+        width: 300px;
+        margin-top: 50px;
+    }
+    
+    #contevis2{margin-top: 50px;}
+    
+    #eticonte,#eticonte1{font-size: 6px;}
+
+    #contenmis2{/*border: 2px red solid;*/padding-right: 100px;}
+
+    #contevis2{padding-right: 30px;/*border: 2px red solid;*/}
+
+    .sec2empre{
+        /*border: 2px green solid;*/
+        width: 100%;
+        margin-top: 6%;
+    }
+    #sec2parrafo,#sec2parrafo2{
+        font-size:80%;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    #movil-panic{
+        color: #ffff;
+        font-family: 'Arimo', sans-serif;
+        font-size: 10px;
+    }
+    #contenmis2{
+        width: 300px;
+        margin-top: 60px;
+        margin-left: 40px;
+    }
+
+    #contevis2{
+        margin-top: 70px;
+    }
+    
+    #eticonte,#eticonte1{
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 432px){
+    #movil-panic{
+        color: #ffff;
+        font-family: 'Arimo', sans-serif;
+        font-size: 10px;
+    }
+    #contenmis2{
+        width: 300px;
+        margin-top: 60px;
+        margin-left: 5px;
+    }
+
+    #contevis2{
+        margin-top: 48px;
+        margin-left: 32px;
+    }
+    
+    #eticonte,#eticonte1{
+        font-size: 7px;
+    }
+    #convitit,#conmitit{
+        font-size: 13px;
+    }
+    #sec2lgv{
+        width: 10%;
+    }
+    #sec2logtit,#sec2logtit2,#sec2logtit3,#sec2logtit4,#sec2logtit5{
+        font-size: 14px;
+    }
+    #sec2par,#sec2par1,#sec2par2,#sec2par3,#sec2par4,#sec2par5{
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 380px){
+    #movil-panic{
+        color: #ffff;
+        font-family: 'Arimo', sans-serif;
+        font-size: 10px;
+    }
+    .sec2empre{margin-top: 2%;}
+    #contenmis2{padding-right: 80px; width: 130%;}
+    #contevis2{padding-left: 30px;}
+    
+    #convitit,#conmitit{
+        font-size: 13px;
+    }
+    #sec2lgv{
+        width: 10%;
+    }
+    #sec2par,#sec2par1,#sec2par2,#sec2par3,#sec2par4,#sec2par5{
+        font-size: 13px;
+    }
+    #sec2logtit,#sec2logtit2,#sec2logtit3,#sec2logtit4,#sec2logtit5{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    #movil-panic{
+        color: #ffff;
+        font-family: 'Arimo', sans-serif;
+        font-size: 10px;
+    }
+    #contenmis2{
+        width: 250px;
+        margin-top: 60px;
+    }
+
+    #contevis2{
+        margin-top: 50px;
+        width: 180px;
+        margin-left: 1px;
+    }
+    
+    #eticonte,#eticonte1{
+        font-size: 7px;
+    }
+    #convitit,#conmitit{
+        font-size: 13px;
+    }
+    #sec2lgv{
+        width: 10%;
+    }
+    #sec2logtit,#sec2logtit2,#sec2logtit3,#sec2logtit4,#sec2logtit5{
+        font-size: 14px;
+    }
+    #sec2par,#sec2par1,#sec2par2,#sec2par3,#sec2par4,#sec2par5{
+        font-size: 13px;
+    }
+
+}

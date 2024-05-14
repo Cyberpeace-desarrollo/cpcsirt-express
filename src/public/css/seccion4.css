@@ -1,0 +1,32 @@
+.Seccion4{
+    background-image: url('../img/fondo4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contenidoSec4{
+    /*border: mediumaquamarine 2px solid;*/
+    height: 100%;
+}
+.sec4titulo{
+    text-align: center;
+    
+}
+#sec4tit{
+    color: #53d7f4;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+#sec4presen{
+    margin-top: 50px;
+    /*border: rgb(20, 14, 168) 2px solid;*/
+}
+#sec4pres{
+    width: 100%;
+}
+@media screen and (max-width: 920px){
+    #sec4tit{
+        font-size: 100%;
+    }
+}
