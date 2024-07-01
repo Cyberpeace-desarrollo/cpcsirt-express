@@ -14,17 +14,531 @@
     <link rel="stylesheet" href="css/seccion5.css">
     <link rel="shortcut icon" href="img/iconpes.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPVQ0H5869"></script> 
-    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-PPVQ0H5869'); </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPVQ0H5869"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-PPVQ0H5869'); </script>
     <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-    
+
     <title>CPCSIRT | CYBERPEACE </title>
+
+    <style>
+        .container_header_2 {
+            background: #03060e;
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .buttons_redesign {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .logo-container {
+            margin-left: 50px;
+            display: flex;
+            align-items: center
+        }
+
+        .logo-img {
+            width: 200px;
+            /* Ajusta este valor según el tamaño deseado */
+            height: auto;
+            /* Mantén la proporción de aspecto */
+        }
+
+        .modern-button {
+            color: white;
+            /* White text */
+            background: #03060e;
+            border: none;
+            /* Remove borders */
+            /* Adjusted padding */
+            text-align: center;
+            /* Centered text */
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 16px;
+            /* Slightly increased font size */
+            margin: 4px 2px;
+            /* Add some margin */
+            transition: border-top 0.5s, background-color 0.3s;
+            /* Smooth transition for border-top and background-color */
+            width: 300px;
+            height: 50px;
+            border-top: 3px solid transparent;
+            /* Initial border-top transparent */
+            cursor: pointer;
+            /* Pointer/hand icon on hover */
+        }
+
+        .modern-button:hover {
+            border-top: 3px solid white;
+            /* Change border-top color on hover */
+        }
+
+        /*Media Querys*/
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+            .container_header_2 {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-img {
+                width: 150px;
+                /* Reduce logo size */
+            }
+
+            .modern-button {
+                width: 130px;
+                /* Reduce button width */
+                font-size: 10px;
+                /* Reduce font size */
+            }
+
+
+            .toggle {
+                /* Reduce the right margin */
+            }
+        }
+
+        /* Media query for mobile (768px) */
+        @media screen and (max-width: 768px) {
+            .container_header_2 {
+                justify-content: space-between;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-img {
+                width: 120px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 130px;
+                /* Reduce button width further */
+                font-size: 10px;
+                /* Reduce font size further */
+            }
+
+            .toggle {
+                margin-right: 30px;
+                /* Remove the right margin */
+            }
+
+            .modern-button:hover {}
+        }
+
+        /* Media query for mobile (768px) */
+        @media screen and (min-width: 426px) and (max-width: 768px) {
+            .container_header_2 {
+                justify-content: space-between;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-img {
+                width: 120px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 130px;
+                /* Reduce button width further */
+                font-size: 10px;
+                /* Reduce font size further */
+            }
+
+            .toggle {
+                margin-right: 30px;
+                /* Remove the right margin */
+            }
+
+            .modern-button:hover {}
+        }
+
+
+        /*493*/
+        /* Media query for mobile (493px) */
+        @media screen and (max-width: 493px) {
+            .container_header_2 {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-container {
+            margin-left: 55px;
+            display: flex;
+            align-items: center
+        }
+
+            .logo-img {
+                width: 80px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 80px;
+                /* Reduce button width further */
+                font-size: 6px;
+                /* Reduce font size further */
+            }
+            .buttons_redesign{
+                width: 160px;
+                border: 1px green solid;
+                margin-left: 15px;
+            }
+
+            .toggle {
+                margin-right: 25px;
+                /* Remove the right margin */
+            }
+
+            /*Languaje*/
+            .check:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 16px;
+                background: gainsboro;
+                border-radius: 25px;
+            }
+
+            .check:checked:before {
+                background: #00a1ff;
+            }
+
+            .check:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 15px;
+                height: 13px;
+                background: #fff;
+                border-radius: 25px;
+                transition: 0.5s;
+                border: 2px solid #333;
+            }
+
+            .check:checked:after {
+                left: 25px;
+                border: 2px solid #00a1ff;
+            }
+
+
+            /*Terminan Languaje*/
+
+            .check {
+                position: relative;
+                width: 40px;
+            }
+
+            .mexico-img {
+                width: 15px;
+                height: 15x;
+                margin-right: 5px;
+            }
+
+            .usa-img {
+                width: 15px;
+                height: 15px;
+                margin-left: 10px;
+            }
+
+            .modern-button:hover {}
+        }
+
+        /*429*/
+         /* Media query for mobile (768px) */
+         @media screen and (max-width: 429px) {
+            .container_header_2 {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-container {
+            margin-left: 15px;
+            display: flex;
+            align-items: center
+        }
+
+            .logo-img {
+                width: 60px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 80px;
+                /* Reduce button width further */
+                font-size: 6px;
+                /* Reduce font size further */
+            }
+            .buttons_redesign{
+                width: 160px;
+                border: 1px green solid;
+                margin-left: 30px;
+            }
+
+            .toggle {
+                margin-right: 5px;
+                /* Remove the right margin */
+            }
+
+            /*Languaje*/
+            .check:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 16px;
+                background: gainsboro;
+                border-radius: 25px;
+            }
+
+            .check:checked:before {
+                background: #00a1ff;
+            }
+
+            .check:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 15px;
+                height: 13px;
+                background: #fff;
+                border-radius: 25px;
+                transition: 0.5s;
+                border: 2px solid #333;
+            }
+
+            .check:checked:after {
+                left: 25px;
+                border: 2px solid #00a1ff;
+            }
+
+
+            /*Terminan Languaje*/
+
+            .check {
+                position: relative;
+                width: 40px;
+            }
+
+            .mexico-img {
+                width: 15px;
+                height: 15x;
+                margin-right: 5px;
+            }
+
+            .usa-img {
+                width: 15px;
+                height: 15px;
+                margin-left: 10px;
+            }
+
+            .modern-button:hover {}
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /* Media query for mobile (425px) */
+        @media screen and (max-width: 425px) {
+            .container_header_2 {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-container {
+            margin-left: 15px;
+            display: flex;
+            align-items: center
+        }
+
+            .logo-img {
+                width: 80px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 80px;
+                /* Reduce button width further */
+                font-size: 6px;
+                /* Reduce font size further */
+            }
+            .buttons_redesign{
+                width: 160px;
+                border: 1px green solid;
+                margin-left: 20px;
+            }
+
+            .toggle {
+                margin-right: 5px;
+                /* Remove the right margin */
+            }
+
+            /*Languaje*/
+            .check:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 16px;
+                background: gainsboro;
+                border-radius: 25px;
+            }
+
+            .check:checked:before {
+                background: #00a1ff;
+            }
+
+            .check:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 15px;
+                height: 13px;
+                background: #fff;
+                border-radius: 25px;
+                transition: 0.5s;
+                border: 2px solid #333;
+            }
+
+            .check:checked:after {
+                left: 25px;
+                border: 2px solid #00a1ff;
+            }
+
+
+            /*Terminan Languaje*/
+
+            .check {
+                position: relative;
+                width: 40px;
+            }
+
+            .mexico-img {
+                width: 15px;
+                height: 15x;
+                margin-right: 5px;
+            }
+
+            .usa-img {
+                width: 15px;
+                height: 15px;
+                margin-left: 10px;
+            }
+
+            .modern-button:hover {}
+        }
+
+        /* Media query for mobile (393px) */
+        @media screen and (max-width: 393px) {
+            .container_header_2 {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .logo-container {
+            margin-left: 15px;
+            display: flex;
+            align-items: center
+        }
+
+            .logo-img {
+                width: 70px;
+                /* Reduce logo size further */
+            }
+
+            .modern-button {
+                width: 110px;
+                /* Reduce button width further */
+                font-size: 8px;
+                /* Reduce font size further */
+            }
+            .buttons_redesign{
+                width: 130px;
+                border: 1px green solid;
+                margin-left: 25px;
+            }
+
+            .toggle {
+            }
+
+            /*Languaje*/
+            .check:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 16px;
+                background: gainsboro;
+                border-radius: 25px;
+            }
+
+            .check:checked:before {
+                background: #00a1ff;
+            }
+
+            .check:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 15px;
+                height: 13px;
+                background: #fff;
+                border-radius: 25px;
+                transition: 0.5s;
+                border: 2px solid #333;
+            }
+
+            .check:checked:after {
+                left: 25px;
+                border: 2px solid #00a1ff;
+            }
+
+
+            /*Terminan Languaje*/
+
+            .check {
+                position: relative;
+                width: 40px;
+            }
+
+            .mexico-img {
+                width: 15px;
+                height: 15x;
+                margin-right: 5px;
+            }
+
+            .usa-img {
+                width: 15px;
+                height: 15px;
+                margin-left: 10px;
+            }
+
+            .modern-button:hover {}
+        }
+    </style>
 </head>
 
 <body>
     <section id="inicio">
-        <header>
-            <div class="container__header">
+        <!--<header>
+           <div class="container__header" style="border: 2px solid red;">
                 <div class="log">
                     <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/logobl.png" alt=""></a>
                 </div>
@@ -37,9 +551,26 @@
                     <input type="button" class="btn-panic" id="open2" value="REPORTAR INCIDENTE DE CIBERSEGURIDAD">
                 </div>
             </div>
+        </header>-->
+        <header>
+            <div class="container_header_2" style="border: 2px solid blue;">
+                <div style="border: 2px solid blue;" class="logo-container">
+                    <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/logobl.png" alt=""
+                            class="logo-img"></a>
+                </div>
+                <div class="buttons_redesign">
+                    <button class="modern-button">BLOG</button>
+                    <button class="modern-button">REPORTAR INCIDENTE</button>
+                </div>
+                <div class="toggle">
+                    <img src="img/mx.svg" alt="" class="mexico-img">
+                    <input id="myCheckbox" type="checkbox" class="check" />
+                    <img src="img/us.svg" alt="" class="usa-img">
+                </div>
+            </div>
         </header>
-  
-         <div class="movil">
+
+        <div class="movil">
             <img src="img/fondmov.png" id="imgmov" alt="" srcset="">
             <input id="movil-panic" type="button" value="REPORTAR INCIDENTE DE CIBERSEGURIDAD">
             <div class="movil-logs">
@@ -50,21 +581,23 @@
         </div>
 
 
-      
+
         <main>
             <div class="cover">
                 <div class="text__informacion-cover">
                     <p id="tit">CPCSIRT</p>
-                    <img src="img/lgcpcsirt.png" id="lgcpcsirt" height="30%" width="90%" alt="" >
-                    <p id="tit2" >EQUIPO DE RESPUESTA A INCIDENTES DE SEGURIDAD</p>
-                    <p id="t">Contamos con los conocimientos y experiencia para garantizar una correcta operación de seguridad alineada las mejores prácticas y estándares internacionales al contar con nuestro MDR SOC</p>
+                    <img src="img/lgcpcsirt.png" id="lgcpcsirt" height="30%" width="90%" alt="">
+                    <p id="tit2">EQUIPO DE RESPUESTA A INCIDENTES DE SEGURIDAD</p>
+                    <p id="t">Contamos con los conocimientos y experiencia para garantizar una correcta operación de
+                        seguridad alineada las mejores prácticas y estándares internacionales al contar con nuestro MDR
+                        SOC</p>
                     <div class="btn-cover">
                         <input type="button" class="btn-em-cover" id="open" value="REPORTAR UN INCIDENTE">
                     </div>
                 </div>
                 <div class="media__cover">
                     <div class="log1">
-                        <img src="img/logpreven_CPCSIRT.png" id="lg1"  alt="">
+                        <img src="img/logpreven_CPCSIRT.png" id="lg1" alt="">
                     </div>
                     <div class="log2">
                         <img src="img/logDetec_CPCSIRT.png" id="lg2" alt="">
@@ -75,47 +608,47 @@
                 </div>
             </div>
         </main>
-    
+
         <div class="modal-container" id="modal_container">
             <div class="modal" style="padding:15px;">
                 <h1 id="emergencia">¿Cuál es su Emergencia?</h1>
                 <form id="form">
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo">
-                            <input type="text" name="telefono" id="telefono" placeholder="Telefono de contacto">
-                            <input type="text" name="email" id="email" placeholder="Correo">
-                            <p class="description">El correo debe incluir solo letras, números, @ y .</p>
-                            <input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa" >
-                            <p class="description">Por favor, introduce un texto de al menos tres caracteres.</p>
-                            <select name="select" id="select">
-                                <option value="Vacio" select id="opcion1">Elija una Opción</option>
-                                <option value="Ransomware">Ransomware</option>
-                                <option value="Malware">Malware</option>
-                                <option value="DDoS">DDoS</option>
-                                <option value="Exfiltración de información" id="opcion2">Exfiltración de información</option>
-                                <option value="Otro" id="opcion3">Otro</option>
-                            </select>
-                            <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" >  
-                            <p class="description">Por favor, introduce un texto de al menos cinco caracteres.</p>
-                            <!--Recaptcha-->
-                            <div class="form-group">
-                                <div class="g-recaptcha" data-sitekey="6Le1so4lAAAAAM45ylkYzCuTdEz4GWW9nxLas-Lh"></div>
-                            </div>
-                            
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo">
+                    <input type="text" name="telefono" id="telefono" placeholder="Telefono de contacto">
+                    <input type="text" name="email" id="email" placeholder="Correo">
+                    <p class="description">El correo debe incluir solo letras, números, @ y .</p>
+                    <input type="text" name="empresa" id="empresa" placeholder="Nombre de la empresa">
+                    <p class="description">Por favor, introduce un texto de al menos tres caracteres.</p>
+                    <select name="select" id="select">
+                        <option value="Vacio" select id="opcion1">Elija una Opción</option>
+                        <option value="Ransomware">Ransomware</option>
+                        <option value="Malware">Malware</option>
+                        <option value="DDoS">DDoS</option>
+                        <option value="Exfiltración de información" id="opcion2">Exfiltración de información</option>
+                        <option value="Otro" id="opcion3">Otro</option>
+                    </select>
+                    <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+                    <p class="description">Por favor, introduce un texto de al menos cinco caracteres.</p>
+                    <!--Recaptcha-->
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6Le1so4lAAAAAM45ylkYzCuTdEz4GWW9nxLas-Lh"></div>
+                    </div>
 
-                            <div id="g-recaptcha-error"></div>
-                            <!--Botones-->
-                            <div class="botones">
-                                <button id="btn_enviar">Enviar</button>
-                                <button id="close">Cerrar</button>
-                            </div>
+
+                    <div id="g-recaptcha-error"></div>
+                    <!--Botones-->
+                    <div class="botones">
+                        <button id="btn_enviar">Enviar</button>
+                        <button id="close">Cerrar</button>
+                    </div>
                 </form>
             </div>
-        </div>  
+        </div>
     </section>
     <section class="Seccion2">
         <div id="menudivisor">
             <div id="barra">
-                <button id="boton1"><img src="img/barra.png" alt="scroll" width="100%" height="100%" ></button>
+                <button id="boton1"><img src="img/barra.png" alt="scroll" width="100%" height="100%"></button>
             </div>
         </div>
         <div class="contenidoSec2">
@@ -123,12 +656,16 @@
                 <h1 id="tituloSec1">¿QUIÉNES SOMOS?</h1>
             </div>
             <div id="textos">
-                <p id="sec2parrafo">Somos un equipo especializado de <span id="title_blue">Cyberpeace</span> que cuenta con las capacidades y habilidades técnicas necesarias para la investigación de amenazas y respuesta a incidentes cibernéticos.</p>
-                <p id="sec2parrafo2">Con base en ello, el <span id="title_blue">Cyberpeace CSIRT</span> unit provee a nuestros clientes y a las empresas que asi lo requieran, una respuesta inmediata y profesional ante cualquier situación de amenaza o crisis cibernética.</p>
+                <p id="sec2parrafo">Somos un equipo especializado de <span id="title_blue">Cyberpeace</span> que cuenta
+                    con las capacidades y habilidades técnicas necesarias para la investigación de amenazas y respuesta
+                    a incidentes cibernéticos.</p>
+                <p id="sec2parrafo2">Con base en ello, el <span id="title_blue">Cyberpeace CSIRT</span> unit provee a
+                    nuestros clientes y a las empresas que asi lo requieran, una respuesta inmediata y profesional ante
+                    cualquier situación de amenaza o crisis cibernética.</p>
             </div>
             <div class="sec2logos">
                 <div class="sec2log">
-                    <img src="img/anticipation.png" id="sec2lg"  alt="">
+                    <img src="img/anticipation.png" id="sec2lg" alt="">
                     <h3 id="sec2logtit">Anticipation</h3>
                     <p id="sec2par">Evite el impacto de amenazas conocidas anticipandose a ellas.</p>
                 </div>
@@ -143,7 +680,7 @@
                     <p id="sec2par2">Monitoreo en tiempo real centralizado de todos sus dispositivos.</p>
                 </div>
                 <div class="sec2log3">
-                    <img src="img/response.png" id="sec2lg3"  alt="">
+                    <img src="img/response.png" id="sec2lg3" alt="">
                     <h3 id="sec2logtit3">Response</h3>
                     <p id="sec2par3">Respuesta y manejo de incidentes.</p>
                 </div>
@@ -158,27 +695,30 @@
                     <p id="sec2par5">Estrategias de soporte en el manejo de incidentes.</p>
                 </div>
             </div>
-            <div class="sec2empre"> 
-                <div id="sec2mision">  
+            <div class="sec2empre">
+                <div id="sec2mision">
                     <div id="contenmis">
                         <img src="img/lgmison.png" id="sec2lgm" alt="">
                         <h3 id="conmitit">Misión</h3>
                     </div>
                     <div id="contenmis2">
                         <div id="sec2ce">
-                            <p id="eticonte">Contribuir a crear un entorno de prevención eficiente para nuestros clientes ante la creciente aparición de amenazas en el ciber espacio que buscan materializarse y lograr afectaciones severas en las infraestructuras.</p>
+                            <p id="eticonte">Contribuir a crear un entorno de prevención eficiente para nuestros
+                                clientes ante la creciente aparición de amenazas en el ciber espacio que buscan
+                                materializarse y lograr afectaciones severas en las infraestructuras.</p>
                         </div>
                     </div>
                 </div>
-                <div id="sec2vision">  
+                <div id="sec2vision">
                     <div id="convis">
                         <img src="img/lgvision.png" id="sec2lgv" alt="">
                         <h3 id="convitit">Visión</h3>
                     </div>
                     <div id="contevis2">
                         <div id="sec2ce1">
-                            <p id="eticonte1">Ser la mejor unidad de respuesta a incidentes reconocida por nuestros clientes y socios de negocio.</p>
-                        </div>                       
+                            <p id="eticonte1">Ser la mejor unidad de respuesta a incidentes reconocida por nuestros
+                                clientes y socios de negocio.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,7 +741,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="sec3circulo1">   
+                <div id="sec3circulo1">
                     <img src="img/circulo.png" id="sec3cir1" alt="">
                     <div id="cir1">
                         <p id="cirtit1">GESTIÓN DE AMENAZAS</p>
@@ -234,7 +774,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </section>
     <section class="Seccion4">
         <div class="contenidoSec4">
@@ -249,14 +789,15 @@
     <section class="Seccion5">
         <div class="contenidoSec5">
             <div id="sec5log">
-                <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/Logoblanco.png" id="lgc1"  height="100%" width="100%" alt=""></a>
+                <a href="https://www.cyberpeace.tech/" target="_blank"><img src="img/Logoblanco.png" id="lgc1"
+                        height="100%" width="100%" alt=""></a>
             </div>
             <div id="sec5suc">
                 <h2 id="sec5tit1">SUCURSALES</h2>
                 <h3 id="sec5su">Cuidad de México</h3>
                 <p id="sec5par">
-                   Periférico Sur 3395, Jardines del Pedregal,
-                   Tlalpan, 14120 Cuidad de México, CDMX.</p>
+                    Periférico Sur 3395, Jardines del Pedregal,
+                    Tlalpan, 14120 Cuidad de México, CDMX.</p>
                 <h3 id="sec5su1">Nuevo Léon</h3>
                 <p id="sec5par1">
                     Humberto Junco Voigt 2037, Valle Oriente,
@@ -280,7 +821,7 @@
             <div id="sec5con">
                 <h2 id="sec5tit3">CONTACTO</h2>
                 <p id="sec5p">
-                   Telefono: +52 55 8111-5800
+                    Telefono: +52 55 8111-5800
                 </p>
                 <p id="sec5p1">
                     Correo: contacto@cyberpeace.tech
@@ -297,4 +838,5 @@
 <script src="js/min/script.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPVQ0H5869"></script>
+
 </html>
