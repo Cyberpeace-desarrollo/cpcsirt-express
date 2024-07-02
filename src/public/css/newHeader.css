@@ -481,7 +481,74 @@
     .modern-button:hover {}
 }
 
+/*Media query for mobile (432)*/
+@media screen and (max-width: 432px) {
+    .container_header_2 {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+    }
 
+    .logo-container {
+        margin-left: 15px;
+        display: flex;
+        align-items: center
+    }
+
+    .logo-img {
+        width: 80px;
+        /* Reduce logo size further */
+    }
+
+    .modern-button {
+        width: 80px;
+        /* Reduce button width further */
+        font-size: 8px;
+        /* Reduce font size further */
+    }
+
+    .buttons_redesign {
+        width: 145px;
+        /*border: 1px green solid;*/
+        margin-left: 30px;
+    }
+
+    .toggle {
+        margin-right: 5px;
+        /* Remove the right margin */
+    }
+
+    /*Languaje*/
+    .check:before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 16px;
+        background: gainsboro;
+        border-radius: 25px;
+    }
+
+    .check:checked:before {
+        background: #00a1ff;
+    }
+
+    .check:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        width: 15px;
+        height: 13px;
+        background: #fff;
+        border-radius: 25px;
+        transition: 0.5s;
+        border: 2px solid #333;
+    }
+
+    .check:checked:after {
+        left: 25px;
+        border: 2px solid #00a1ff;
+    }
+}
 
 /* Media query for mobile (425px) */
 @media screen and (max-width: 425px) {
@@ -777,7 +844,7 @@
     }
 
     .modern-button {
-        width: 110px;
+        width: 100px;
         /* Reduce button width further */
         font-size: 9px;
         /* Reduce font size further */
@@ -785,9 +852,9 @@
 
     .buttons_redesign {
         gap: 30px;
-        width: 100px;
+        width: 90px;
         /*border: 1px green solid;*/
-        margin-left: 40px;
+        margin-left: 35px;
     }
 
     .toggle {}
