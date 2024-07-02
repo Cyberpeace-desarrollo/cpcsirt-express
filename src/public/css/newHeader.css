@@ -839,7 +839,7 @@
     }
 
     .logo-img {
-        width: 80px;
+        width: 100px;
         /* Reduce logo size further */
     }
 
@@ -852,13 +852,13 @@
 
     .buttons_redesign {
         gap: 30px;
-        width: 80px;
+        width: 120px;
         /*border: 1px green solid;*/
         margin-left: 35px;
     }
 
     .toggle {
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     /*Languaje*/
@@ -1208,7 +1208,7 @@
     }
 
     .buttons_redesign {
-        width: 80px;
+        width: 110px;
         gap: 30px;
         /*border: 1px green solid;*/
         margin-left: 30px;
