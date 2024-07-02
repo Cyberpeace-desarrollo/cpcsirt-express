@@ -852,7 +852,7 @@
 
     .buttons_redesign {
         gap: 30px;
-        width: 90px;
+        width: 80px;
         /*border: 1px green solid;*/
         margin-left: 35px;
     }
@@ -1029,6 +1029,94 @@
 
     .buttons_redesign {
         width: 110px;
+        /*border: 1px green solid;*/
+        margin-left: 25px;
+    }
+
+    .toggle {}
+
+    /*Languaje*/
+    .check:before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 16px;
+        background: gainsboro;
+        border-radius: 25px;
+    }
+
+    .check:checked:before {
+        background: #00a1ff;
+    }
+
+    .check:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        width: 15px;
+        height: 13px;
+        background: #fff;
+        border-radius: 25px;
+        transition: 0.5s;
+        border: 2px solid #333;
+    }
+
+    .check:checked:after {
+        left: 25px;
+        border: 2px solid #00a1ff;
+    }
+
+
+    /*Terminan Languaje*/
+
+    .check {
+        position: relative;
+        width: 40px;
+    }
+
+    .mexico-img {
+        width: 15px;
+        height: 15x;
+        margin-right: 5px;
+    }
+
+    .usa-img {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+
+    .modern-button:hover {}
+}
+
+/*Media Query for mobile 372*/
+@media screen and (max-width: 372px) {
+    .container_header_2 {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .logo-container {
+        margin-left: 15px;
+        display: flex;
+        align-items: center
+    }
+
+    .logo-img {
+        width: 75px;
+        /* Reduce logo size further */
+    }
+
+    .modern-button {
+        width: 110px;
+        /* Reduce button width further */
+        font-size: 8px;
+        /* Reduce font size further */
+    }
+
+    .buttons_redesign {
+        width: 95px;
         /*border: 1px green solid;*/
         margin-left: 25px;
     }
