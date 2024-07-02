@@ -852,13 +852,13 @@
 
     .buttons_redesign {
         gap: 30px;
-        width: 120px;
+        width: 100px;
         /*border: 1px green solid;*/
         margin-left: 35px;
     }
 
     .toggle {
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     /*Languaje*/
