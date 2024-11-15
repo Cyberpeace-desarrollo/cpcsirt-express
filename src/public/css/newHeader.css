@@ -845,21 +845,22 @@
     }
 
     .modern-button {
-        width: 100px;
+        width: 80px;
         /* Reduce button width further */
         font-size: 9px;
         /* Reduce font size further */
     }
 
     .buttons_redesign {
-        gap: 30px;
+        width: 90px;
+        gap: 15px;
         width: 50px;
         /*border: 1px green solid;*/
-        margin-left: 35px;
+        margin-left: 20px;
     }
 
     .toggle {
-        margin-left: 70px;
+        
     }
 
     /*Languaje*/
