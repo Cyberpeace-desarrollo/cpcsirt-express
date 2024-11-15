@@ -823,9 +823,10 @@
     .modern-button:hover {}
 }
 
-
+/* Media query for mobile (768px) */
+/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
 /* Media query for mobile (393px) */
-@media screen and (max-width: 393px) {
+@media screen and (min-width: 380px) and (max-width: 393px) {
     .container_header_2 {
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -858,7 +859,7 @@
     }
 
     .toggle {
-        margin-left: 24px;
+        margin-left: 70px;
     }
 
     /*Languaje*/
@@ -1201,20 +1202,23 @@
     }
 
     .modern-button {
-        width: 110px;
+        width: 90px;
         /* Reduce button width further */
         font-size: 8px;
         /* Reduce font size further */
     }
 
     .buttons_redesign {
-        width: 110px;
+        width: 80px;
+        /*border: red solid 1px;*/
         gap: 30px;
         /*border: 1px green solid;*/
-        margin-left: 30px;
+        margin-left: 25px;
     }
 
-    .toggle {}
+    .toggle {
+        
+    }
 
     /*Languaje*/
     .check:before {
