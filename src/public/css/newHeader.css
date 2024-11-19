@@ -826,7 +826,7 @@
 /* Media query for mobile (768px) */
 /*@media screen and (min-width: 426px) and (max-width: 768px) {*/
 /* Media query for mobile (393px) */
-@media screen and (min-width: 380px) and (max-width: 393px) {
+@media screen and (max-width: 393px) {
     .container_header_2 {
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -856,65 +856,12 @@
         gap: 15px;
         width: 50px;
         /*border: 1px green solid;*/
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
     .toggle {
         
     }
-
-    /*Languaje*/
-    .check:before {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 16px;
-        background: gainsboro;
-        border-radius: 25px;
-    }
-
-    .check:checked:before {
-        background: #00a1ff;
-    }
-
-    .check:after {
-        content: '';
-        position: absolute;
-        left: 0px;
-        width: 15px;
-        height: 13px;
-        background: #fff;
-        border-radius: 25px;
-        transition: 0.5s;
-        border: 2px solid #333;
-    }
-
-    .check:checked:after {
-        left: 25px;
-        border: 2px solid #00a1ff;
-    }
-
-
-    /*Terminan Languaje*/
-
-    .check {
-        position: relative;
-        width: 40px;
-    }
-
-    .mexico-img {
-        width: 15px;
-        height: 15x;
-        margin-right: 5px;
-    }
-
-    .usa-img {
-        width: 15px;
-        height: 15px;
-        margin-left: 10px;
-    }
-
-    .modern-button:hover {}
 }
 
 /*Media Query for mobile 379*/
