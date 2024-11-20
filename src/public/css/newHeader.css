@@ -823,48 +823,6 @@
     .modern-button:hover {}
 }
 
-/* Media query for mobile (768px) */
-/*@media screen and (min-width: 426px) and (max-width: 768px) {*/
-/* Media query for mobile (393px) */
-@media screen and (max-width: 393px) {
-    .container_header_2 {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .logo-container {
-        margin-left: 15px;
-        display: flex;
-        align-items: center
-    }
-
-    .logo-img {
-        width: 100px;
-        /* Reduce logo size further */
-    }
-
-    .modern-button {
-        width: 80px;
-        /* Reduce button width further */
-        font-size: 9px;
-        /* Reduce font size further */
-    }
-
-    .buttons_redesign {
-        width: 90px;
-        gap: 15px;
-        width: 50px;
-        /*border: 1px green solid;*/
-        margin-left: 30px;
-        border: 1px red solid;
-    }
-
-    .toggle {
-        
-    }
-}
-
 /*Media Query for mobile 379*/
 @media screen and (max-width: 379px) {
     .container_header_2 {
