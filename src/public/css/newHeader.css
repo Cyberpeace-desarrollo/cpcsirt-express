@@ -670,7 +670,7 @@
     .buttons_redesign {
         width: 100px;
         /*border: 1px green solid;*/
-        margin-left: 35px;
+        margin-left: 37px;
         /*border: 1px red solid;*/
     }
 
@@ -763,7 +763,7 @@
     .buttons_redesign {
         width: 90px;
         /*border: 1px green solid;*/
-        margin-left: 30px;
+        margin-left: 35px;
     }
 
     .toggle {
@@ -833,12 +833,12 @@
         gap: 15px;
         width: 50px;
         /*border: 1px green solid;*/
-        margin-left: 38px;
-        border: 1px red solid;
+        margin-left: 40px;
+        
     }
 
     .toggle {
-        border: green 1px solid;
+       
     }
 }
 
