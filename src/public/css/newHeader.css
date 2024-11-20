@@ -823,6 +823,23 @@
     .modern-button:hover {}
 }
 
+
+/* Media query for mobile (393px) */
+@media screen and (max-width: 393px) {
+    .toggle {
+        border: green 1px solid;
+    }
+
+    .buttons_redesign {
+        width: 90px;
+        gap: 15px;
+        width: 50px;
+        /*border: 1px green solid;*/
+        margin-left: 30px;
+        border: 1px red solid;
+    }
+}
+
 /*Media Query for mobile 379*/
 @media screen and (max-width: 379px) {
     .container_header_2 {
