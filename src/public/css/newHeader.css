@@ -829,7 +829,7 @@
 /* Media query for mobile (393px) */
 @media screen and (max-width: 393px) {
     .buttons_redesign {
-        width: 90px;
+        width: 100px;
         gap: 22px;
         width: 50px;
         /*border: 1px green solid;*/
