@@ -857,6 +857,7 @@
         width: 50px;
         /*border: 1px green solid;*/
         margin-left: 30px;
+        border: 1px red solid;
     }
 
     .toggle {
