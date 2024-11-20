@@ -656,7 +656,7 @@
     }
 
     .logo-img {
-        width: 85px;
+        width: 90px;
         /* Reduce logo size further */
     }
 
@@ -668,13 +668,15 @@
     }
 
     .buttons_redesign {
-        width: 90px;
+        width: 100px;
         /*border: 1px green solid;*/
-        margin-left: 25px;
+        margin-left: 35px;
+        /*border: 1px red solid;*/
     }
 
     .toggle {
         margin-right: 5px;
+        /*border: 1px red solid;*/
         /* Remove the right margin */
     }
 
@@ -761,7 +763,7 @@
     .buttons_redesign {
         width: 90px;
         /*border: 1px green solid;*/
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
     .toggle {
@@ -826,17 +828,17 @@
 
 /* Media query for mobile (393px) */
 @media screen and (max-width: 393px) {
-    .toggle {
-        border: green 1px solid;
-    }
-
     .buttons_redesign {
         width: 90px;
         gap: 15px;
         width: 50px;
         /*border: 1px green solid;*/
-        margin-left: 30px;
+        margin-left: 38px;
         border: 1px red solid;
+    }
+
+    .toggle {
+        border: green 1px solid;
     }
 }
 
